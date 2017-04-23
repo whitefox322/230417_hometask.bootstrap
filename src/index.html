@@ -1,0 +1,414 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/app.css">
+    <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+</head>
+<body>
+<header class="mainHeader">
+    <button class="navbar-toggle collapsed mainHeader__button" data-toggle="collapse" data-target="#navbarCollapsed">
+        <span class="glyphicon glyphicon-tasks"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapsed">
+        <nav class="mainNav">
+            <ul class="mainList">
+                <li class="mainList__item">
+                    <a href="#" class="mainList__link">Item 1</a>
+                </li>
+                <li class="mainList__item">
+                    <a href="#" class="mainList__link">Item 2</a>
+                </li>
+                <li class="mainList__item">
+                    <a href="#" class="mainList__link">Item 3</a>
+                </li>
+                <li class="mainList__item">
+                    <a href="#" class="mainList__link">Item 4</a>
+                </li>
+            </ul>
+            <ul class="mainList mainList--right">
+                <li class="mainList__item">
+                    <a href="#" class="mainList__link" data-toggle="modal" data-target="#loginModal">Login</a>
+                </li>
+                <li class="mainList__item">
+                    <a href="#" class="mainList__link" data-toggle="modal" data-target="#registerModal">Register</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <div class="modal fade" id="loginModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                    <h4 class="modal-title">Login</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">Email address</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputPassword1">Password</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1"
+                                   placeholder="Password">
+                        </div>
+                        <a href="#" role="button" class="btn btn-link">Forgot password?</a>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Log in</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade bs-example-modal-lg" id="registerModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+                    <h4 class="modal-title">Registration</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="firstName">First name</label>
+                            <input type="text" class="form-control" id="firstName" placeholder="First name">
+                        </div>
+                        <div class="form-group">
+                            <label for="surName">Surname</label>
+                            <input type="text" class="form-control" id="surName" placeholder="Surname">
+                        </div>
+                        <div class="form-group">
+                            <label>Age</label>
+                            <div class="radio">
+                                <label class="radio-inline">
+                                    <input type="radio" name="optionsRadios" value="option1" checked>
+                                    Male
+                                </label>
+                                <label class="radio-inline">
+                                    <input type="radio" name="optionsRadios" value="option2">
+                                    Female
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="registerEmail">Email address</label>
+                            <input type="email" class="form-control" id="registerEmail" placeholder="Email">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerPass">Password</label>
+                            <input type="password" class="form-control" id="registerPass" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label for="registerConfirm">Confirm password</label>
+                            <input type="password" class="form-control" id="registerConfirm" placeholder="Password">
+                        </div>
+                        <div class="form-group">
+                            <label class="checkbox-inline">
+                                <input type="checkbox">I agree with <a href="#">license terms and conditions</a>
+                            </label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Register</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="mainTabs">
+    <ul class="nav nav-tabs contentHeader" role="tablist">
+        <li role="presentation" class="active"><a href="#sliderTab" role="tab" data-toggle="tab">Slider</a></li>
+        <li role="presentation"><a href="#gallery" role="tab" data-toggle="tab">Gallery</a></li>
+    </ul>
+    <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="sliderTab">
+            <div id="slider" class="carousel slide" data-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-target="#slider" data-slide-to="0" class="active"></li>
+                    <li data-target="#slider" data-slide-to="1"></li>
+                    <li data-target="#slider" data-slide-to="2"></li>
+                    <li data-target="#slider" data-slide-to="3"></li>
+                    <li data-target="#slider" data-slide-to="4"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="images/slide1.jpg" alt="Slide 1">
+                        <div class="carousel-caption">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium, amet.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/slide2.jpg" alt="Slide 2">
+                        <div class="carousel-caption">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa, molestiae.
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/slide3.jpg" alt="Slide 3">
+                        <div class="carousel-caption">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem, molestias?
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/slide4.jpg" alt="Slide 4">
+                        <div class="carousel-caption">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae, sunt?
+                        </div>
+                    </div>
+                    <div class="item">
+                        <img src="images/slide5.jpg" alt="Slide 5">
+                        <div class="carousel-caption">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium, perferendis?
+                        </div>
+                    </div>
+                </div>
+                <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left"></span>
+                </a>
+                <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right"></span>
+                </a>
+            </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="gallery">
+            <main class="container">
+                <header class="page-header">
+                    <h1 class="contentHeader">Some gallery</h1>
+                </header>
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Lorem ipsum dolor.</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusamus
+                                    aliquam atque consequatur deserunt dolor, minus, nostrum officiis quae quam ullam
+                                    vel veritatis?
+                                    Ducimus, ipsa, quia? Alias aliquid aperiam delectus dignissimos ea eaque expedita
+                                    inventore ipsa
+                                    ipsum laboriosam nesciunt nobis obcaecati quis soluta tempora, temporibus tenetur
+                                    unde voluptas
+                                    voluptate voluptatibus voluptatum.</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Dicta, doloremque repellendus.</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Aliquid
+                                    excepturi molestiae nemo tenetur ut veritatis. Accusamus atque beatae cum ducimus
+                                    eius expedita,
+                                    explicabo fugiat impedit ipsam, libero maxime minima nam nisi quidem recusandae
+                                    sequi tenetur
+                                    voluptatibus! Dignissimos dolor est impedit libero nulla praesentium veniam!
+                                    Accusantium eaque
+                                    fuga necessitatibus numquam voluptatum.</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Modi, sapiente totam.</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Animi deleniti
+                                    distinctio earum eveniet maxime provident quibusdam quis sapiente sed voluptas? A ab
+                                    accusamus
+                                    at cupiditate deserunt dolorem inventore modi nulla optio perspiciatis rerum
+                                    similique, velit
+                                    voluptas? Ad alias aliquam, aspernatur dolor, eius facilis laborum mollitia odio
+                                    quos
+                                    reprehenderit tempora voluptas!</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Corporis, recusandae, voluptatem.</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Aut
+                                    consequatur consequuntur dolor enim hic id, in perspiciatis sunt tempore voluptatum!
+                                    Dolorem
+                                    dolores eligendi est ratione sapiente temporibus ut. Atque aut, beatae delectus
+                                    dignissimos
+                                    distinctio doloremque ducimus ex in ipsa itaque magnam magni nulla optio quisquam,
+                                    sequi sint
+                                    temporibus totam vel?</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Consequatur, quaerat sunt.</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Accusantium
+                                    corporis doloribus omnis. Ab aliquam, deserunt esse ex excepturi, facere illum
+                                    impedit iure
+                                    libero modi nihil nobis obcaecati omnis pariatur quam quibusdam reprehenderit rerum
+                                    saepe
+                                    tempora tempore temporibus veritatis voluptate! Cumque debitis dignissimos, ducimus
+                                    libero
+                                    mollitia nobis nostrum reprehenderit rerum saepe.</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Enim fugiat, quibusdam.</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Consequatur
+                                    dicta facere fuga iure laudantium neque quia reiciendis vitae! A ab architecto
+                                    assumenda cumque
+                                    debitis dignissimos dolorem ea eaque est eum ex exercitationem fuga fugit ipsum
+                                    magnam minus
+                                    molestiae necessitatibus odit provident qui, quidem reiciendis saepe similique sit
+                                    temporibus
+                                    tenetur veritatis.</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Nisi, odit, rerum?</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab
+                                    accusamus
+                                    adipisci alias amet aperiam, architecto assumenda dolore doloremque dolores earum
+                                    eos esse et ex
+                                    explicabo fuga impedit inventore laudantium maiores nisi nostrum odio, omnis
+                                    perferendis
+                                    possimus praesentium quae quasi quod quos sint sunt tempore unde ut velit voluptate
+                                    voluptatem,
+                                    voluptatum?</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Error quaerat, soluta.</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Adipisci
+                                    alias, doloremque earum ipsam itaque obcaecati quo reiciendis unde! Aliquam aperiam
+                                    aut autem
+                                    culpa cupiditate delectus dicta dolor dolore ea eius error eum excepturi
+                                    exercitationem expedita
+                                    iste itaque iusto laboriosam laudantium necessitatibus nobis quasi qui, ratione
+                                    reprehenderit
+                                    sint soluta suscipit voluptatem!</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Excepturi, quos, voluptate?</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Asperiores
+                                    dolor eligendi est et eum magni molestias neque officiis quisquam quod repellendus,
+                                    repudiandae
+                                    temporibus, ut. Accusantium aperiam aspernatur beatae dicta dolores eaque earum
+                                    eligendi est id
+                                    impedit, magni natus necessitatibus, porro praesentium provident quidem repellat
+                                    repudiandae
+                                    similique tenetur totam ullam vitae.</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Minus, nobis, nulla?</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A
+                                    culpa dolor
+                                    dolores ea, ex exercitationem facere laborum nulla quae, quibusdam quos temporibus
+                                    voluptate
+                                    voluptatibus. Alias aliquid amet architecto corporis eius harum, hic incidunt iure
+                                    laborum
+                                    quaerat quis, quod ratione, rerum voluptatem voluptatum. Cupiditate delectus,
+                                    deserunt eum
+                                    praesentium quaerat ratione repudiandae.</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">Aut, dolores fuga?</h3>
+                                <p class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Beatae
+                                    consequatur, cupiditate dignissimos doloribus dolorum ea eligendi illum neque,
+                                    nostrum nulla
+                                    officiis quaerat quam. A aspernatur commodi consectetur cumque dicta dignissimos
+                                    doloribus error
+                                    et impedit iste laborum modi, nisi odit porro possimus praesentium quae quaerat,
+                                    quasi, sapiente
+                                    vel veniam voluptatem voluptates!</p>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                        <div class="thumbnail">
+                            <img src="images/300x200.png" alt="300x200" class="contentImg">
+                            <div class="caption">
+                                <h3 class="contentImg__header">In placeat, quos.</h3>
+                                <div class="contentImg__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                    Assumenda
+                                    aut beatae exercitationem incidunt quasi quisquam, ratione voluptas. Fugiat itaque
+                                    minima
+                                    nesciunt ullam! Aliquam corporis debitis dicta eius inventore iste laudantium
+                                    maiores maxime
+                                    minima modi molestiae neque nihil nobis omnis placeat quaerat, sed veniam
+                                    voluptatem.
+                                    Consectetur deserunt impedit repellendus ullam voluptatum?
+                                </div>
+                                <p><a href="#" role="button" class="btn btn-link">Download</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>
+
+<script src="../node_modules/jquery/dist/jquery.min.js"></script>
+<script src="../node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+.contentHeader {
+  font-weight: bold;
+}
+.contentImg {
+  display: inline-block;
+}
+.contentImg__header {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.contentImg__text {
+  height: 6em;
+  overflow: hidden;
+  display: inline-block;
+}

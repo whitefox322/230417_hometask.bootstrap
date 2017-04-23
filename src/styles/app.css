@@ -1,0 +1,23 @@
+@import "components/header.css";
+@import "components/content.css";
+@media screen and (max-width: 768px) {
+  .mainHeader {
+    height: auto;
+    min-height: 55px;
+  }
+  .mainNav {
+    height: auto;
+    margin-top: 55px;
+  }
+  .mainList {
+    display: block;
+    width: 100%;
+  }
+  .mainList--right {
+    text-align: left;
+  }
+  .mainList__item {
+    display: block;
+    padding: 5px 15px;
+  }
+}
